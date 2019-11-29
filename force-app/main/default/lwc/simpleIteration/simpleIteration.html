@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Simple Iteration">
+        <div slot="actions">
+            <lightning-button label="Add Another" name="addAnother" onclick={addItem}></lightning-button>
+        </div>
+        <template for:each={objList} for:item="obj">
+            <div key={obj.name}>
+                -->{obj.name}
+            </div>
+        </template>
+    </lightning-card>
+</template>
